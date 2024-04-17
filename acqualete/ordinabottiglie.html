@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Acqua Lete - Ordina</title>
+	<link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <style>
+        
+        table {
+            display: none;
+        }
+
+        div {
+            display: none;
+        }
+
+    </style>
+
+	<header>
+
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="ordinabottiglie.html">Ordina Bottiglie</a>
+                <a href="sede-legale.html">Sede Legale</a>
+                <a href="contatti.html">Contattaci</a>
+            </nav>
+
+
+        </header>
+
+        <section>
+
+            <h1 align = "center">Seleziona la bottiglia.</h1>
+            <br><br><br><br>
+            <img src="img/big.jpg" class="immagine-ingrandita" alt="Bottiglia acqua lete 150cl">
+            <img src="img/100cl.jpg" class ="immagine-ingrandita" alt="Bottiglia acqua lete 100cl">
+            <img src="img/50cl.jpg" class ="immagine-ingrandita" alt="Bottiglia acqua lete 50cl">
+            <img src="img/small.jpg" class = "immagine-ingrandita" alt ="Bottiglia acqua lete 33cl">
+
+        </section>
+
+<br>
+    <center><button id="mostra-tabella">Acquista Bottiglie.</button>
+        <div id="divis">
+        <label for="dataInput">Indirizzo</label>
+        <input type="text" id="dataInput"> 
+        <label for="dataInput2">Numero di Bottiglie</label>
+        <input type="text" id="dataInput2">
+        
+        <button onclick="aggTab()">Ordina</button>
+        </div>
+
+        <table id="mia-tabella" border="1">
+        <thead>
+            <tr>
+                <th>Indirizzo</th>
+                <th>Numero di Bottiglie</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </center>
+    <script>
+        // Funzione per gestire il clic sull'immagine
+        function ingrandisciImmagine() {
+            // Toggle della classe "ingrandita" sull'immagine cliccata
+            this.classList.toggle('ingrandita');
+        }
+
+        // Aggiungi il gestore di eventi di clic a tutte le immagini con la classe "immagine-ingrandita"
+        var immaginiIngrandibili = document.querySelectorAll('.immagine-ingrandita');
+        immaginiIngrandibili.forEach(function(immagine) {
+            immagine.addEventListener('click', ingrandisciImmagine);
+        });
+
+        function mostraTabellaOrdine() {
+        var div = document.getElementById('divis');
+        var tabella = document.getElementById('mia-tabella');
+        tabella.style.display = 'table'; // Mostra la tabella
+        div.style.display = 'block';
+        }
+
+        // Aggiungi il gestore di eventi di clic al bottone
+        var bottoneMostraTabella = document.getElementById('mostra-tabella');
+        bottoneMostraTabella.addEventListener('click', mostraTabellaOrdine);
+       
+    </script>
+
+</body>
+</html>
