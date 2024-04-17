@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti</title>
+    <style>
+        /* Stile per il contenitore dei contatti */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Stile per il form di contatto */
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        /* Stile per i campi del form */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        
+        /* Stile per il pulsante di invio */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Stile per il pulsante di invio al passaggio del mouse */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+<header>
+
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="ordinabottiglie.html">Ordina Bottiglie</a>
+                <a href="sede-legale.html">Sede Legale</a>
+                <a href="contatti.html">Contattaci</a>
+            </nav>
+
+
+        </header>
+
+<!-- Contenitore dei contatti -->
+<div class="contact-container">
+    <h2>Contattaci</h2>
+    <p>Compila il modulo sottostante per contattarci.</p>
+
+    <!-- Form di contatto -->
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Il tuo nome.." required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="La tua email.." required>
+
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message" placeholder="Scrivi qualcosa.." style="height:200px" required></textarea>
+
+        <input onclick="alert('Email inviata.');"type="submit" value="Invia">
+    </form>
+</div>
+
+</body>
+</html>
