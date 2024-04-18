@@ -19,13 +19,13 @@ function aggTab() {
         const cl33 = document.getElementById("33cl");
 
         // Verifichiamo la larghezza delle immagini e impostiamo il prezzo
-        if (cl150 && cl150.width === 1000) {
+        if (cl150 && cl150.width === 225) {
             prezzo = 0.60;
-        } else if (cl100 && cl100.width === 1000) {
+        } else if (cl100 && cl100.width === 225) {
             prezzo = 0.50;
-        } else if (cl50 && cl50.width === 1000) {
+        } else if (cl50 && cl50.width === 225) {
             prezzo = 0.35;
-        } else if (cl33 && cl33.width === 1000) {
+        } else if (cl33 && cl33.width === 225) {
             prezzo = 0.20;
         }
     }
