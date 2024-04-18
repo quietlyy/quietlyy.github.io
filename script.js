@@ -50,7 +50,8 @@ function aggTab() {
         inputElement.value = '';
         inputElement2.value = '';
 
-    }
+        }
+    }    
 }
 
 function calc(i){
