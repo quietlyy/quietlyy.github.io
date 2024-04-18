@@ -8,15 +8,15 @@ class bottCost {
 
 function aggTab() {
     alert("Ordine effettuato!");
-    const prezzo = 0,20;
-    const prezzoTOT = prezzoTOT + prezzo;
     const inputElement = document.getElementById('dataInput');
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
     const inputValue2 = inputElement2.value;
-
+    const prezzoFinale = 0,20 * inputValue2;
+    const prezzoTOTValue = prezzoFinale.value;
+    
     if (inputValue.trim() !== '') {
-        const newDataItem = new bottCost(inputValue, inputValue2);
+        const newDataItem = new bottCost(inputValue, inputValue2, prezzoTOTValue);
 
         // Aggiungi riga alla tabella
         const tableBody = document.querySelector('#mia-tabella tbody');
@@ -26,10 +26,11 @@ function aggTab() {
         const cell3 = newRow.insertCell(2);
         cell.textContent = inputValue;
         cell2.textContent = inputValue2;
-        cell3.textContent = prezzoTOT; 
+        cell3.textContent = prezzoTOTValue; 
         
         inputElement.value = '';
-        inputElement2.value = ''
+        inputElement2.value = '';
+        prezzoFinale.value = '';
 
     }
 }
