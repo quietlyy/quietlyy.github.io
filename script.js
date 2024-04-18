@@ -7,12 +7,33 @@ class bottCost {
 }
 
 function aggTab() {
+    
     alert("Ordine effettuato!");
+    const prezzo = 0;
+    function checkWidth() {
+            // Selezioniamo l'elemento immagine
+            var cl150 = document.getElementById("150cl");
+            var cl100 = document.getElementById("100cl");
+            var cl50 = document.getElementById("50cl");
+            var cl33 = document.getElementById("33cl");
+
+            // Verifichiamo la larghezza dell'immagine
+            if (cl150.width === 1000) {
+                prezzo = 0.60;
+            } else if(cl100.width === 1000){
+                prezzo = 0.50;
+            } else if(cl50.width === 1000){
+                prezzo = 0.35;
+            } else if(cl33.width === 1000){
+                prezzo = 0.20;
+            }
+    }
+    checkWidth();
     const inputElement = document.getElementById('dataInput');
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
     const inputValue2 = inputElement2.value;
-    const prezzoFinale = 0.20 * inputValue2;
+    const prezzoFinale = prezzo * inputValue2;
     
     if (inputValue.trim() !== '') {
         const newDataItem = new bottCost(inputValue, inputValue2, prezzoFinale);
@@ -88,5 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
 
 
