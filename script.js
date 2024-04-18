@@ -6,7 +6,7 @@ class bottCost {
     }
 }
 
-function aggTab() {
+/*function aggTab() {
     
     alert("Ordine effettuato!");
     let prezzo = 0;
@@ -53,6 +53,68 @@ function aggTab() {
         }
 }   
 
+*/
+
+function aggTab() {
+    // Dichiarazione e inizializzazione della variabile prezzo
+    let prezzo = 0;
+    
+    // Funzione per controllare la larghezza delle immagini e calcolare il prezzo
+    function checkWidth() {
+        // Selezioniamo gli elementi immagine
+        const cl150 = document.getElementById("150cl");
+        const cl100 = document.getElementById("100cl");
+        const cl50 = document.getElementById("50cl");
+        const cl33 = document.getElementById("33cl");
+
+        // Verifichiamo la larghezza delle immagini e impostiamo il prezzo
+        if (cl150 && cl150.naturalWidth === 225) {
+            prezzo = 0.60;
+        } else if (cl100 && cl100.naturalWidth === 225) {
+            prezzo = 0.50;
+        } else if (cl50 && cl50.naturalWidth === 225) {
+            prezzo = 0.35;
+        } else if (cl33 && cl33.naturalWidth === 225) {
+            prezzo = 0.20;
+        }
+        
+        // Calcoliamo il prezzo finale qui dopo aver verificato la larghezza delle immagini
+        const inputElement = document.getElementById('dataInput2');
+        const inputValue2 = inputElement.value;
+        const prezzoFinale = prezzo * inputValue2;
+        
+        // Output di debug per verificare il prezzo finale
+        console.log("Prezzo finale:", prezzoFinale);
+        
+        return prezzoFinale; // Restituiamo il prezzo finale
+    }
+
+    // Chiamiamo la funzione per controllare la larghezza delle immagini e calcolare il prezzo
+    const prezzoFinale = checkWidth();
+    
+    // Ottieni il valore dell'input
+    const inputElement = document.getElementById('dataInput');
+    const inputValue = inputElement.value;
+
+    // Verifica se l'input non è vuoto
+    if (inputValue.trim() !== '') {
+        // Aggiungi riga alla tabella
+        const tableBody = document.querySelector('#mia-tabella tbody');
+        const newRow = tableBody.insertRow();
+        const cell = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        cell.textContent = inputValue;
+        cell2.textContent = inputValue2;
+        cell3.textContent = prezzoFinale.toFixed(2); // Arrotondiamo a due decimali
+        
+        // Reset dell'input
+        inputElement.value = '';
+        
+        // Mostra un messaggio di conferma
+        alert("Ordine effettuato!");
+    }
+}
 
 function calc(i){
     switch(i) {
