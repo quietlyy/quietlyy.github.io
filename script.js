@@ -51,8 +51,8 @@ function aggTab() {
         inputElement2.value = '';
 
         }
-    }    
-}
+}   
+
 
 function calc(i){
     switch(i) {
