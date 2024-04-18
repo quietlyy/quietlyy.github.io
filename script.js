@@ -12,11 +12,10 @@ function aggTab() {
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
     const inputValue2 = inputElement2.value;
-    const prezzoFinale = 0,20 * inputValue2;
-    const prezzoTOTValue = prezzoFinale.value;
+    const prezzoFinale = 0.20 * inputValue2;
     
     if (inputValue.trim() !== '') {
-        const newDataItem = new bottCost(inputValue, inputValue2, prezzoTOTValue);
+        const newDataItem = new bottCost(inputValue, inputValue2, prezzoFinale);
 
         // Aggiungi riga alla tabella
         const tableBody = document.querySelector('#mia-tabella tbody');
@@ -26,11 +25,10 @@ function aggTab() {
         const cell3 = newRow.insertCell(2);
         cell.textContent = inputValue;
         cell2.textContent = inputValue2;
-        cell3.textContent = prezzoTOTValue; 
+        cell3.textContent = prezzoFinale; 
         
         inputElement.value = '';
         inputElement2.value = '';
-        prezzoFinale.value = '';
 
     }
 }
