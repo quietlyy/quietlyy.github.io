@@ -9,7 +9,7 @@ class bottCost {
 function aggTab() {
     
     alert("Ordine effettuato!");
-    const prezzo = 0;
+    let prezzo = 0;
     
     function checkWidth() {
         // Selezioniamo gli elementi immagine
@@ -36,7 +36,7 @@ function aggTab() {
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
     const inputValue2 = inputElement2.value;
-    const prezzoFinale = prezzo * inputValue2;
+    let prezzoFinale = prezzo * inputValue2;
     
     if (inputValue.trim() !== '') {
         const newDataItem = new bottCost(inputValue, inputValue2, prezzoFinale);
