@@ -10,24 +10,27 @@ function aggTab() {
     
     alert("Ordine effettuato!");
     const prezzo = 0;
+    
     function checkWidth() {
-            // Selezioniamo l'elemento immagine
-            var cl150 = document.getElementById("150cl");
-            var cl100 = document.getElementById("100cl");
-            var cl50 = document.getElementById("50cl");
-            var cl33 = document.getElementById("33cl");
+        // Selezioniamo gli elementi immagine
+        const cl150 = document.getElementById("150cl");
+        const cl100 = document.getElementById("100cl");
+        const cl50 = document.getElementById("50cl");
+        const cl33 = document.getElementById("33cl");
 
-            // Verifichiamo la larghezza dell'immagine
-            if (cl150.width === 1000) {
-                prezzo = 0.60;
-            } else if(cl100.width === 1000){
-                prezzo = 0.50;
-            } else if(cl50.width === 1000){
-                prezzo = 0.35;
-            } else if(cl33.width === 1000){
-                prezzo = 0.20;
-            }
+        // Verifichiamo la larghezza delle immagini e impostiamo il prezzo
+        if (cl150 && cl150.width === 1000) {
+            prezzo = 0.60;
+        } else if (cl100 && cl100.width === 1000) {
+            prezzo = 0.50;
+        } else if (cl50 && cl50.width === 1000) {
+            prezzo = 0.35;
+        } else if (cl33 && cl33.width === 1000) {
+            prezzo = 0.20;
+        }
     }
+
+    
     checkWidth();
     const inputElement = document.getElementById('dataInput');
     const inputValue = inputElement.value;
