@@ -63,7 +63,6 @@ function visible(i) {
     if(i == 1){
         document.getElementById('table').hidden = true;
     } else{
-        document.getElementById('dataTable').hidden = false;
         document.getElementById('table').hidden = false;
     }
     
