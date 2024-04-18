@@ -4,8 +4,35 @@ body{
     background-color:powderblue;
 }
 
-.bottoneImmagineAcqua {
-      background-image: url('link_all_immagine.jpg'); /* Inserisci il link all'immagine qui */
+.bottoneImmagine150cl {
+      background-image: url('img/big.jpg'); /* Inserisci il link all'immagine qui */
+      background-size: cover;
+      width: 200px; /* Imposta la larghezza desiderata */
+      height: 100px; /* Imposta l'altezza desiderata */
+      border: none;
+      cursor: pointer;
+    }
+
+.bottoneImmagine100cl {
+      background-image: url('img/100cl.jpg'); /* Inserisci il link all'immagine qui */
+      background-size: cover;
+      width: 200px; /* Imposta la larghezza desiderata */
+      height: 100px; /* Imposta l'altezza desiderata */
+      border: none;
+      cursor: pointer;
+    }
+
+.bottoneImmagine50cl {
+      background-image: url('img/50cl.jpg'); /* Inserisci il link all'immagine qui */
+      background-size: cover;
+      width: 200px; /* Imposta la larghezza desiderata */
+      height: 100px; /* Imposta l'altezza desiderata */
+      border: none;
+      cursor: pointer;
+    }
+
+.bottoneImmagine33cl {
+      background-image: url('img/small.jpg'); /* Inserisci il link all'immagine qui */
       background-size: cover;
       width: 200px; /* Imposta la larghezza desiderata */
       height: 100px; /* Imposta l'altezza desiderata */
