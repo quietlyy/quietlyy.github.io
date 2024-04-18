@@ -8,11 +8,17 @@ class bottCost {
 
 function aggTab() {
     alert("Ordine effettuato!");
+    let prezzo = 0;
     const inputElement = document.getElementById('dataInput');
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
     const inputValue2 = inputElement2.value;
-    const prezzoFinale = 0.20 * inputValue2;
+
+    function changePrice(newPrice) {
+        prezzo = newPrice;
+}
+    
+    const prezzoFinale = prezzo * inputValue2;
     
     if (inputValue.trim() !== '') {
         const newDataItem = new bottCost(inputValue, inputValue2, prezzoFinale);
@@ -25,7 +31,7 @@ function aggTab() {
         const cell3 = newRow.insertCell(2);
         cell.textContent = inputValue;
         cell2.textContent = inputValue2;
-        cell3.textContent = prezzoFinale; 
+        cell3.textContent = prezzoFinale+"€"; 
         
         inputElement.value = '';
         inputElement2.value = '';
