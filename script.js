@@ -1,12 +1,15 @@
 class bottCost {
-    constructor(bottiglie, costi) {
+    constructor(bottiglie, costi, prezzo) {
         this.bottiglie = bottiglie;
         this.costi = costi;
+        this.prezzo = prezzo;
     }
 }
 
 function aggTab() {
     alert("Ordine effettuato!");
+    const prezzo = 0,20;
+    const prezzoTOT = prezzoTOT + prezzo;
     const inputElement = document.getElementById('dataInput');
     const inputValue = inputElement.value;
     const inputElement2 = document.getElementById('dataInput2');
@@ -20,8 +23,10 @@ function aggTab() {
         const newRow = tableBody.insertRow();
         const cell = newRow.insertCell(0);
         const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
         cell.textContent = inputValue;
         cell2.textContent = inputValue2;
+        cell3.textContent = prezzoTOT; 
         
         inputElement.value = '';
         inputElement2.value = ''
